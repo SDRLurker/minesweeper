@@ -1,0 +1,413 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+// Generated Help ID header file
+#define APSTUDIO_HIDDEN_SYMBOLS
+#include "resource.hm"
+#undef APSTUDIO_HIDDEN_SYMBOLS
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Korean resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_KOR)
+#ifdef _WIN32
+LANGUAGE LANG_KOREAN, SUBLANG_DEFAULT
+#pragma code_page(949)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_ICON1               ICON    DISCARDABLE     "icon1.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+KOREAN MENU DISCARDABLE 
+BEGIN
+    POPUP "게임(&G)"
+    BEGIN
+        MENUITEM "시작(&S)...   F2",            START
+        MENUITEM SEPARATOR
+        POPUP "난이도(&L)"
+        BEGIN
+            MENUITEM "초급(&B)",                    BEGINNER
+            MENUITEM "중급(&M)",                    MEDIUM
+            MENUITEM "고급(&P)",                    PRO
+            MENUITEM "전체화면(&F)",                FULL
+            MENUITEM "사용자 정의(&C)",             CUSTOM
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "최고 기록(&1)",               SCORE
+        MENUITEM SEPARATOR
+        MENUITEM "종료(&X)",                    OUT_EXIT
+    END
+    POPUP "언어(&L)"
+    BEGIN
+        MENUITEM "한국어(&K)",                  KOREAN
+        MENUITEM "영어(&E)",                    ENGLISH
+    END
+    POPUP "도움말(&H)"
+    BEGIN
+        MENUITEM "도움말 항목(&H)",             HELP
+        MENUITEM SEPARATOR
+        MENUITEM "정보(&C)",                    CREDIT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+DIALOG_ENG DIALOG DISCARDABLE  0, 0, 127, 90
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Custom Setting"
+FONT 10, "System"
+BEGIN
+    EDITTEXT        WIDTH,67,14,39,12,ES_AUTOHSCROLL
+    EDITTEXT        HEIGHT,67,28,39,12,ES_AUTOHSCROLL
+    EDITTEXT        MINES,67,42,39,12,ES_AUTOHSCROLL
+    LTEXT           "Width :",IDC_STATIC,23,17,24,8
+    LTEXT           "Height :",IDC_STATIC,23,30,26,8
+    LTEXT           "Mines :",IDC_STATIC,23,44,25,8
+    DEFPUSHBUTTON   "Cancel",IDCENCEL,69,63,43,14
+    DEFPUSHBUTTON   "OK",IDOK,15,63,43,14
+END
+
+CREDIT_KOR DIALOGEX 0, 0, 141, 122
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "정보"
+FONT 10, "System"
+BEGIN
+    DEFPUSHBUTTON   "확인",IDOK,84,101,50,14
+    LTEXT           "지뢰찾기 세트메뉴 버젼 1.0",IDC_STATIC,16,15,112,12,0,0,
+                    HIDC_STATIC
+    LTEXT           "제작자 : 신나~*(신동렬)           (1982sdr@hanmail.net)",
+                    IDC_STATIC,16,29,110,18,0,0,HIDC_STATIC
+END
+
+CREDIT_ENG DIALOGEX 0, 0, 141, 122
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Credit"
+FONT 10, "System"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,84,101,50,14
+    LTEXT           "MineSweeper Set Menu Ver1.0",IDC_STATIC,14,15,112,12,0,
+                    0,HIDC_STATIC
+    LTEXT           "Presented by Dong-ryul Shin         (1982sdr@hanmail.net)",
+                    IDC_STATIC,14,29,110,18,0,0,HIDC_STATIC
+END
+
+DIALOG_KOR DIALOG DISCARDABLE  0, 0, 127, 90
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "사용자 정의"
+FONT 10, "System"
+BEGIN
+    DEFPUSHBUTTON   "취소",IDCENCEL,69,62,43,14
+    EDITTEXT        WIDTH,67,14,39,12,ES_AUTOHSCROLL
+    EDITTEXT        HEIGHT,67,28,39,12,ES_AUTOHSCROLL
+    EDITTEXT        MINES,67,42,39,12,ES_AUTOHSCROLL
+    LTEXT           "너비 :",IDC_STATIC,23,17,21,8
+    LTEXT           "높이 :",IDC_STATIC,23,30,21,8
+    LTEXT           "지뢰수 :",IDC_STATIC,23,44,29,8
+    DEFPUSHBUTTON   "확인",IDOK,14,62,43,14
+END
+
+RECORD_KOR DIALOG DISCARDABLE  0, 0, 151, 122
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "최고기록"
+FONT 10, "System"
+BEGIN
+    DEFPUSHBUTTON   "확인",IDOK,51,91,50,14
+    LTEXT           "초급 :",IDC_STATIC,7,29,41,10
+    LTEXT           "중급 :",IDC_STATIC,7,43,41,10
+    LTEXT           "고급 :",IDC_STATIC,7,56,41,10
+    LTEXT           "전체화면 :",IDC_STATIC,7,70,41,10
+    RTEXT           "",BEGIN_NAME,54,29,55,10,SS_CENTERIMAGE
+    RTEXT           "",MEDIUM_NAME,54,43,55,10,SS_CENTERIMAGE
+    RTEXT           "",PRO_NAME,54,56,55,10,SS_CENTERIMAGE
+    RTEXT           "",FULL_NAME,54,70,55,10,SS_CENTERIMAGE
+    RTEXT           "",BEGIN_TIMES,118,29,26,10,SS_CENTERIMAGE
+    RTEXT           "",MEDIUM_TIMES,118,43,26,10,SS_CENTERIMAGE
+    RTEXT           "",PRO_TIMES,118,56,26,10,SS_CENTERIMAGE
+    RTEXT           "",FULL_TIMES,118,70,26,10,SS_CENTERIMAGE
+    CTEXT           "이름",IDC_STATIC,54,14,55,10,SS_CENTERIMAGE
+    CTEXT           "시간",IDC_STATIC,118,14,26,10,SS_CENTERIMAGE
+END
+
+ASK_KOR DIALOG DISCARDABLE  0, 0, 143, 96
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "최고기록 등록"
+FONT 10, "System"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,46,75,50,14
+    EDITTEXT        REG,18,54,104,12,ES_AUTOHSCROLL
+    LTEXT           "",MODE,18,13,103,8
+    LTEXT           "1등을 하셨습니다.                    이름을 입력하세요.",
+                    IDC_STATIC,18,23,109,16
+    LTEXT           "",RECORD,18,41,105,10
+END
+
+IDD_DIALOG1 DIALOG DISCARDABLE  0, 0, 187, 94
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Dialog"
+FONT 10, "System"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,130,7,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,130,24,50,14
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    DIALOG_ENG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 120
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 83
+    END
+
+    CREDIT_KOR, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 134
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 115
+    END
+
+    CREDIT_ENG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 134
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 115
+    END
+
+    DIALOG_KOR, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 120
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 83
+    END
+
+    RECORD_KOR, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 144
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 115
+    END
+
+    ASK_KOR, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 136
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 89
+    END
+
+    IDD_DIALOG1, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 180
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 87
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+Tl                      BITMAP  DISCARDABLE     "tl.bmp"
+Mine_Board              BITMAP  DISCARDABLE     "original.bmp"
+Icons                   BITMAP  DISCARDABLE     "icon.bmp"
+#endif    // Korean resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+ENGLISH MENU DISCARDABLE 
+BEGIN
+    POPUP "&Game"
+    BEGIN
+        MENUITEM "&Start....       F2",         START
+        MENUITEM SEPARATOR
+        POPUP "&Level"
+        BEGIN
+            MENUITEM "&Beginner",                   BEGINNER
+            MENUITEM "&Medium",                     MEDIUM
+            MENUITEM "&Professional",               PRO
+            MENUITEM "&Full Mode",                  FULL
+            MENUITEM "&Custom",                     CUSTOM
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "&1st Record",                 SCORE
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit",                       OUT_EXIT
+    END
+    POPUP "&Language"
+    BEGIN
+        MENUITEM "&Korean",                     KOREAN
+        MENUITEM "&English",                    ENGLISH
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&Help",                       HELP
+        MENUITEM SEPARATOR
+        MENUITEM "&Credit",                     CREDIT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+RECORD_ENG DIALOG DISCARDABLE  0, 0, 151, 122
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "1st Record"
+FONT 10, "System"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,51,91,50,14
+    LTEXT           "Beginner :",IDC_STATIC,7,29,41,10,SS_CENTERIMAGE
+    LTEXT           "Medium :",IDC_STATIC,7,43,41,10,SS_CENTERIMAGE
+    LTEXT           "Professional :",IDC_STATIC,7,56,47,10,SS_CENTERIMAGE
+    LTEXT           "Full Mode :",IDC_STATIC,7,70,41,10,SS_CENTERIMAGE
+    RTEXT           "",BEGIN_NAME,54,29,55,10,SS_CENTERIMAGE
+    RTEXT           "",MEDIUM_NAME,54,43,55,10,SS_CENTERIMAGE
+    RTEXT           "",PRO_NAME,54,56,55,10,SS_CENTERIMAGE
+    RTEXT           "",FULL_NAME,54,70,55,10,SS_CENTERIMAGE
+    RTEXT           "",BEGIN_TIMES,118,29,26,10,SS_CENTERIMAGE
+    RTEXT           "",MEDIUM_TIMES,118,43,26,10,SS_CENTERIMAGE
+    RTEXT           "",PRO_TIMES,118,56,26,10,SS_CENTERIMAGE
+    RTEXT           "",FULL_TIMES,118,70,26,10,SS_CENTERIMAGE
+    CTEXT           "Name",IDC_STATIC,54,14,55,10,SS_CENTERIMAGE
+    CTEXT           "Time",IDC_STATIC,118,14,26,10,SS_CENTERIMAGE
+END
+
+ASK_ENG DIALOG DISCARDABLE  0, 0, 143, 96
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Register 1st Record"
+FONT 10, "System"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,46,75,50,14
+    EDITTEXT        REG,18,54,104,12,ES_AUTOHSCROLL
+    LTEXT           "",MODE,18,13,103,9
+    LTEXT           "you win the first prize.               Input your name.",
+                    IDC_STATIC,18,23,109,17
+    LTEXT           "",RECORD,18,42,112,10
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    RECORD_ENG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 144
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 115
+    END
+
+    ASK_ENG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 136
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 89
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
